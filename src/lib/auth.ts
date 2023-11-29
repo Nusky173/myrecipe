@@ -15,5 +15,20 @@ export const getAuthSession = async (
     ...parameters: ParametersGetServerSession
 ) => {
     const session = await getServerSession(...parameters, authOptions);
+
+    delete session?.user?.id;
+
     return session;
+};
+
+export const getAuthUser = async (
+    ...parameters: ParametersGetServerSession
+) => {
+    const user = await getServerSession(...parameters, authOptions).then(
+        (user) => user?.user,
+    );
+
+    delete user?.id;
+
+    return user;
 };

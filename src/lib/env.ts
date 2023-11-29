@@ -6,6 +6,8 @@ export const env = createEnv({
         DATABASE_URL: z.string().url(),
         GITHUB_ID: z.string().min(1),
         GITHUB_SECRET: z.string().min(1),
+        EMAIL_FROM: z.string().min(1),
+        EMAIL_SERVER: z.string().min(1),
     },
     client: {
         // Nothing here yet

@@ -22,17 +22,21 @@ export default function RootLayout({ children }: PropsWithChildren) {
             <html
                 lang='en'
                 className='h-full'
-                suppressHydrationWarning>
+                suppressHydrationWarning
+            >
                 <head />
                 <body
                     className={cn(
                         'h-full bg-background font-sans antialiased',
-                        fontSans.variable
-                    )}>
+                        fontSans.variable,
+                    )}
+                >
                     <Providers>
                         <div className='relative flex min-h-screen flex-col'>
                             <Header />
-                            <div className='flex-1'>{children}</div>
+                            <div className='flex h-full flex-1 basis-full justify-center'>
+                                {children}
+                            </div>
                             <Footer />
                         </div>
                         <TailwindIndicator />
