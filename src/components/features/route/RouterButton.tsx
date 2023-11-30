@@ -1,8 +1,6 @@
-'use client';
-
 import Link from 'next/link';
 import { PropsWithChildren } from 'react';
-import { Button, ButtonProps } from '../ui/button';
+import { Button, ButtonProps } from '../../ui/button';
 
 interface RoutterButtonProps extends ButtonProps {
     url: string;
@@ -16,7 +14,7 @@ const RouterButton = (props: PropsWithChildren<RoutterButtonProps>) => (
     >
         <Link
             href={props.url}
-            className='flex flex-1 items-center'
+            className='flex w-full flex-1 items-center justify-center'
         >
             {props.children}
         </Link>

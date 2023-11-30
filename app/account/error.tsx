@@ -1,6 +1,6 @@
 'use client';
 
-import LoginButton from '@/components/features/LoginButton';
+import LoginButton from '@/components/features/auth/LoginButton';
 import { Card, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useEffect } from 'react';
 

@@ -19,3 +19,15 @@ export interface SendVerificationRequestParams {
 export const sendVerificationRequest = (
     params: SendVerificationRequestParams,
 ) => {};
+
+export const Category: { [key: string]: string } = {
+    STARTER: 'Entrée',
+    MAIN_DISH: 'Plat',
+    DESERT: 'Dessert',
+    SALAD: 'Salad',
+    SAUCE: 'Sauce',
+    SOUP: 'Soupe',
+    COCKTAIL: 'Cocktail',
+    DRINK: 'Boisson',
+    OTHER: 'Autre',
+};

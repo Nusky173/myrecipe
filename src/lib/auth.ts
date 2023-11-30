@@ -28,7 +28,5 @@ export const getAuthUser = async (
         (user) => user?.user,
     );
 
-    delete user?.id;
-
     return user;
 };

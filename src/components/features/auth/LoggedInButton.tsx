@@ -10,18 +10,18 @@ import {
     AlertDialogHeader,
     AlertDialogTitle,
     AlertDialogTrigger,
-} from '../ui/alert-dialog';
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { Button } from '../ui/button';
+} from '../../ui/alert-dialog';
+import { Avatar, AvatarFallback, AvatarImage } from '../../ui/avatar';
+import { Button } from '../../ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from '../ui/dropdown-menu';
+} from '../../ui/dropdown-menu';
+import RouterButton from '../route/RouterButton';
 import LogoutButton from './LogoutButton';
-import RouterButton from './RouterButton';
 
 export type LoggedinButtonProps = {
     user: Session['user'];
@@ -71,7 +71,7 @@ const LoggedInButton = (props: LoggedinButtonProps) => {
                             <Button
                                 variant='outline'
                                 size='sm'
-                                className='flex w-full flex-1 '
+                                className='flex w-full flex-1 items-center'
                             >
                                 <LogOut
                                     size={12}
@@ -90,7 +90,7 @@ const LoggedInButton = (props: LoggedinButtonProps) => {
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                         <AlertDialogCancel>Annuler</AlertDialogCancel>
-                        <LogoutButton></LogoutButton>
+                        <LogoutButton className='text-sm'></LogoutButton>
                     </AlertDialogFooter>
                 </AlertDialogContent>
             </AlertDialog>

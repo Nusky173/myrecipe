@@ -3,8 +3,8 @@
 import { useMutation } from '@tanstack/react-query';
 import { LogIn } from 'lucide-react';
 import { signIn } from 'next-auth/react';
-import Loader from '../ui/Loader';
-import { Button } from '../ui/button';
+import Loader from '../../ui/Loader';
+import { Button } from '../../ui/button';
 
 const LoginButton = () => {
     const mutation = useMutation({

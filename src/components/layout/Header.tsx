@@ -1,7 +1,7 @@
 import { ThemeToggle } from '@/components/theme/ThemeToggle';
 import { SiteConfig } from '@/lib/config';
 import Link from 'next/link';
-import AuthLogin from '../features/AuthLogin';
+import AuthLogin from '../features/auth/AuthLogin';
 import { Typography } from '../ui/Typography';
 
 export function Header() {
@@ -13,6 +13,7 @@ export function Header() {
                         variant='h3'
                         as={Link}
                         href='/'
+                        className='text-primary'
                     >
                         {SiteConfig.title}
                     </Typography>
