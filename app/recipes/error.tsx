@@ -19,7 +19,7 @@ export default function Error({
     return (
         <Card className='m-auto max-w-lg items-center justify-center'>
             <CardHeader className='basis-1/2 flex-row justify-center'>
-                <CardTitle>
+                <CardTitle className='text-center'>
                     Vous devez être connecté pour voir cette page !
                 </CardTitle>
             </CardHeader>

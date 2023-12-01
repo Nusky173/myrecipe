@@ -18,7 +18,7 @@ const RecipesLayout = ({ children }: PropsWithChildren) => {
             <div className='flex w-full flex-1 justify-between gap-4'>
                 <Button
                     className='flex basis-1/2 items-center '
-                    variant='outline_primary'
+                    variant='outline'
                 >
                     <Filter
                         size={16}
@@ -31,7 +31,7 @@ const RecipesLayout = ({ children }: PropsWithChildren) => {
             <div className='w-full'>
                 <Label></Label>
                 <Input
-                    className='w-full'
+                    className='w-full border-primary'
                     type='text'
                     placeholder={`Rechercher`}
                 ></Input>

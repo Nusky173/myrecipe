@@ -6,6 +6,10 @@ import { prisma } from '@/lib/prisma';
 const RecipesPage = async () => {
     const user = await getAuthUser().then((res) => res);
 
+    if (!user) {
+        throw new Error('No session');
+    }
+
     const myRecipes = await prisma.recipe.findMany({
         where: {
             userId: user!.id,
@@ -13,7 +17,6 @@ const RecipesPage = async () => {
     });
 
     if (myRecipes.length > 0) {
-        console.log(myRecipes.length);
         return (
             <>
                 <div className='text-lg font-semibold'>Mes recettes</div>
